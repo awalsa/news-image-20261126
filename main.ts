@@ -32,3 +32,6 @@ const shipped = readFileSync(target);
 if (!shipped.equals(page)) {
   throw new Error('entry.png was not copied byte for byte');
 }
+
+// Say so on success: a silent run leaves no trace that the page shipped.
+console.log(`entry.png (${page.length} bytes) copied to ${target}`);
